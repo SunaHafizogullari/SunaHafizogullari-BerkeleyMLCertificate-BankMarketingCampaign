@@ -56,8 +56,8 @@ The following customers are more likely to accept the offer compared with the ot
 - Older prospects
 - Single
 - Customers who are admin or work at service industry
-- 
-The economic environment is also a factor in the customer behavior. During an economic downturn, prospects have less appetite to open a term deposit account.
+
+The economic environment is also a factor in the customer behavior. People's spending and saving habits change during economic uncertainity. During an economic downturn, prospects have less appetite to open a term deposit account.
 
 # Deployment
 
