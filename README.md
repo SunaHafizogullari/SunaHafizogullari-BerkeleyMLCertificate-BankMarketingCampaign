@@ -10,17 +10,17 @@ This project has two objectives:
 Several steps were taken to get to know the dataset and identify any data quality issues with the dataset.
 - Review of the columns in the dataset:
   - Do we have a good understanding of all the columns in the dataset?
-  - Which columns can be used for the prediction problem?
+  - Which columns can be used for the classification problem?
   - Are there any columns not required for the modeling problem?
   - Is the relationship between the input variables and target explainable and palatable?
   - Is there any collinearity in the development sample?
  
 - Review of the rows in the dataset:
-  - Are there sufficient records for the prediction problem?
+  - Are there sufficient records for the classification problem?
   - Are there any duplicate records?
   - Are there any outliers?
   - Are there any records with missing values that can be excluded from the analysis sample?
-  - How do you deal with records with "unknown" values for the columns we want to keep for modeling?
+  - How to deal with records with "unknown" values for the columns we want to keep for modeling?
 
 ## Data Preparation
 Any issues with the data were resolved in this step:
@@ -28,7 +28,7 @@ Any issues with the data were resolved in this step:
 - Dropped the 'duration' variable since it is a target leaker. The duration is not known before the call is made, and therefore cannot be used for model implementation.
 - Dropped variables highly correlated with the other variables.
 - Hot encoded and label encoded the categorical variables.
-- Tested interaction variables (2-degree polynomial)
+- Tested interaction variables (2-degree polynomial).
 - Prepared train (75%) and test (25%) samples for model development.
 
 ## Modeling
@@ -48,15 +48,15 @@ We developed kNN, logistic regression, decision tree and SVM models:
 
 ##Evaluation
 
-Logistic regression performed better than the other models in terms of the higher performance metrics and shorter runtimes. Even though we improved the AUC from 0.647 to 0.805, more research is required to further enhance the model's predictive power.
+Logistic regression performed better than the other models in terms of higher performance metrics and shorter runtimes. Even though we improved the AUC from 0.647 to 0.805, more research is required to further enhance the model's predictive power.
 
 The following customers are more likely to accept the offer compared with the other segments of the population:
-- Did not default on their prior credit obligations.
+- Did not default on their prior credit obligations
 - Students and retired
 - Older prospects
 - Single
-- Customers who are admin and work at services
-
+- Customers who are admin or work at service industry
+- 
 The economic environment is also a factor in the customer behavior. During an economic downturn, prospects have less appetite to open a term deposit account.
 
 # Deployment
@@ -64,7 +64,7 @@ The economic environment is also a factor in the customer behavior. During an ec
 Our recommendations for next steps are summarized as follows:
 - The model may benefit from further research on the variable selection criteria. A more thorough analysis should be done to eliminate the non-palatable and autocorrelated variables from the dataset.
 
-- The bank may be contacted and asked if we could get the campaign date for each record dataset. This level of detail will help us better understand if some marketing campaigns have yielded more favorable subscription rates. Data for Some campaigns that are not relevant anymore may be excluded from model development.
+- The bank may be contacted and asked if we could get the campaign date for each record dataset. This level of detail will help us better understand if some marketing campaigns have yielded more favorable subscription rates. Data for some campaigns that are not relevant anymore may be excluded from model development. The correlation with the economic factors may be better established.
 
 - A cost-benefit analysis (cost of contacting a customer vs. profit of a booked account) may be done to associate the performance metrics with the $ values.
 
