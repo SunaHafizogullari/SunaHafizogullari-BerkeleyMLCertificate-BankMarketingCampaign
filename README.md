@@ -43,4 +43,4 @@ We developed kNN, logistic regression, decision tree and SVM models:
 |Decision Tree|Default|Customer + Contact + Contextual|None|0.621|
 |Logistic Regression|Default|Customer + Contact + Contextual|Drop variables with very coefficient values|0.803|
 |Logistic Regression|Default|Customer + Contact + Contextual|Drop variables with very coefficient values, Polynomial transformation to detect interaction|0.805|
-|Logistic Regression|Variable Section of 20 variables, Penalty = L2, C = 100|Customer + Contact + Contextual|Drop variables with very coefficient values|0.803|
+|Logistic Regression|Variable Section of 20 variables, Penalty = L2, C = 100|Customer + Contact + Contextual|Drop variables with very low coefficient values|0.803|
