@@ -28,6 +28,7 @@ Any issues with the data were resolved in this step:
 - Dropped the 'duration' variable since it is a target leaker. The duration is not known before the call is made, and therefore cannot be used for model implementation.
 - Dropped variables highly correlated with the other variables.
 - Hot encoded and label encoded the categorical variables.
+- Tested interaction variables (2-degree polynomial)
 - Prepared train (75%) and test (25%) samples for model development.
 
 ## Modeling
@@ -44,3 +45,27 @@ We developed kNN, logistic regression, decision tree and SVM models:
 |Logistic Regression|Default|Customer + Contact + Contextual|Drop variables with very low coefficient values|0.803|
 |Logistic Regression|Default|Customer + Contact + Contextual|Drop variables with very low coefficient values, Polynomial transformation to detect interaction|0.805|
 |Logistic Regression|Variable Section of 20 variables, Penalty = L2, C = 100|Customer + Contact + Contextual|Drop variables with very low coefficient values|0.803|
+
+##Evaluation
+
+Logistic regression performed better than the other models in terms of the higher performance metrics and shorter runtimes. Even though we improved the AUC from 0.647 to 0.805, more research is required to further enhance the model's predictive power.
+
+The following customers are more likely to accept the offer compared with the other segments of the population:
+- Did not default on their prior credit obligations.
+- Students and retired
+- Older prospects
+- Single
+- Customers who are admin and work at services
+
+The economic environment is also a factor in the customer behavior. During an economic downturn, prospects have less appetite to open a term deposit account.
+
+# Deployment
+
+Our recommendations for next steps are summarized as follows:
+- The model may benefit from further research on the variable selection criteria. A more thorough analysis should be done to eliminate the non-palatable and autocorrelated variables from the dataset.
+
+- The bank may be contacted and asked if we could get the campaign date for each record dataset. This level of detail will help us better understand if some marketing campaigns have yielded more favorable subscription rates. Data for Some campaigns that are not relevant anymore may be excluded from model development.
+
+- A cost-benefit analysis (cost of contacting a customer vs. profit of a booked account) may be done to associate the performance metrics with the $ values.
+
+You can find the Jupyter notebook in this location: https://github.com/SunaHafizogullari/SunaHafizogullari-BerkeleyMLCertificate-BankMarketingCampaign/blob/main/prompt_III_SunaHafizogullari.ipynb
