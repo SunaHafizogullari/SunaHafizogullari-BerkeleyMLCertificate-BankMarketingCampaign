@@ -46,7 +46,7 @@ We developed kNN, logistic regression, decision tree and SVM models:
 |Logistic Regression|Default|Customer + Contact + Contextual|Drop variables with very low coefficient values, Polynomial transformation to detect interaction|0.805|
 |Logistic Regression|Variable Section of 20 variables, Penalty = L2, C = 100|Customer + Contact + Contextual|Drop variables with very low coefficient values|0.803|
 
-##Evaluation
+## Evaluation
 
 Logistic regression performed better than the other models in terms of higher performance metrics and shorter runtimes. Even though we improved the AUC from 0.647 to 0.805, more research is required to further enhance the model's predictive power.
 
